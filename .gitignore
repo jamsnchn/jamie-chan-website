@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Full-size originals, resume and portfolio PDF (kept locally, not part of the site)
+source/
+
+# Old images the site no longer uses
+assets/work/_unused/
