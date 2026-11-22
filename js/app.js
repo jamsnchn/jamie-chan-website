@@ -86,15 +86,76 @@ function useCopy(text) {
   return [copied, copy];
 }
 
+// Home-page sections, top to bottom, each matched to its header tab.
+const SECTIONS = ["work", "about", "experience", "contact"];
+
+// Which home section is on screen: the last one whose heading has passed 35% of the way down the
+// window ("top" above the first one). At the very bottom it's always the last section, since Contact
+// is too short to reach that line on tall screens.
+// A clicked tab stays highlighted until the visitor scrolls by hand, so a short section near the
+// bottom (which can't scroll all the way up) still shows the tab that was clicked.
+function useActiveSection(enabled) {
+  const [active, setActive] = useState("top");
+  const pinned = useRef(false);
+  const pick = id => { pinned.current = true; setActive(id); };
+  useEffect(() => {
+    if (!enabled) return;
+    let raf = 0;
+    const unpin = () => { pinned.current = false; };
+    const unpinKey = e => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key)) unpin(); };
+    const measure = () => {
+      raf = 0;
+      if (pinned.current) return;
+      const line = innerHeight * 0.35;
+      let id = "top";
+      for (const s of SECTIONS) { const el = document.getElementById(s); if (el && el.getBoundingClientRect().top <= line) id = s; }
+      if (innerHeight + scrollY >= document.documentElement.scrollHeight - 4) id = SECTIONS[SECTIONS.length - 1];
+      setActive(id);
+    };
+    const on = () => { if (!raf) raf = requestAnimationFrame(measure); };
+    measure();
+    const opts = { passive: true };
+    addEventListener("scroll", on, opts);
+    addEventListener("resize", on);
+    addEventListener("wheel", unpin, opts);
+    addEventListener("touchstart", unpin, opts);
+    addEventListener("keydown", unpinKey);
+    return () => {
+      removeEventListener("scroll", on); removeEventListener("resize", on);
+      removeEventListener("wheel", unpin); removeEventListener("touchstart", unpin); removeEventListener("keydown", unpinKey);
+      cancelAnimationFrame(raf);
+      pinned.current = false;   // leaving the home page; a tab clicked elsewhere pins again
+    };
+  }, [enabled]);
+  return [active, pick];
+}
+
 function Header({ route, lang, setLang }) {
-  const onPhotos = route && route.key === "photography";
+  const key = route ? route.key : "home";
+  const onHome = key === "home";
+  const [section, setSection] = useActiveSection(onHome);
+  // Highlighted tab: the section in view on the home page, Work on a project page, Photography on its page.
+  const current = onHome ? (section === "top" ? "home" : section) : key === "photography" ? "photography" : "work";
+  const navRef = useRef(null);
+  useEffect(() => {
+    // Phones: slide the tab row so the highlighted tab is visible.
+    const nav = navRef.current, pill = nav && nav.querySelector(".pill.current");
+    if (!pill || nav.scrollWidth <= nav.clientWidth) return;
+    const left = pill.offsetLeft - nav.offsetLeft, right = left + pill.offsetWidth;
+    if (left < nav.scrollLeft || right > nav.scrollLeft + nav.clientWidth - 28) nav.scrollTo({ left: Math.max(0, left - 8), behavior: "smooth" });
+  }, [current]);
+  const tab = (id, href, label, extra) => h("a", {
+    key: id, className: "pill " + extra + (current === id ? " current" : ""), href,
+    "aria-current": current === id ? (id === "home" || id === "photography" ? "page" : "location") : undefined,
+    // Highlight straight away on click; the scroll position then keeps it in sync.
+    onClick: () => { if (id !== "photography") setSection(id === "home" ? "top" : id); }
+  }, label);
   return h("header", null,
-    h("nav", { className: "nav-group", "aria-label": T.navLabel },
-      h("a", { className: "pill home" + (!route || route.key === "home" ? " current" : ""), href: "#top", "aria-current": !route || route.key === "home" ? "page" : undefined }, T.nav.home),
-      ["work", "about", "experience"].map(id =>
-        h("a", { key: id, className: "pill navlink", href: "#" + id }, T.nav[id])),
-      h("a", { className: "pill photo" + (onPhotos ? " current" : ""), href: "#/photography", "aria-current": onPhotos ? "page" : undefined }, T.nav.photography),
-      h("a", { className: "pill navlink", href: "#contact" }, T.nav.contact)
+    h("nav", { ref: navRef, className: "nav-group", "aria-label": T.navLabel },
+      tab("home", "#top", T.nav.home, "home"),
+      ["work", "about", "experience"].map(id => tab(id, "#" + id, T.nav[id], "navlink")),
+      tab("photography", "#/photography", T.nav.photography, "photo"),
+      tab("contact", "#contact", T.nav.contact, "navlink")
     ),
     h("div", { className: "nav-group" }, h(LangToggle, { lang, setLang }))
   );
