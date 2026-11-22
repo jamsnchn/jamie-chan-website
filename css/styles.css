@@ -63,9 +63,19 @@
   @media (hover: hover) and (pointer: fine) {
     .pill:not(.current):not(.lang):hover { background: var(--pill-hover); padding: 0 22px; }
   }
-  @media (max-width: 860px) { .pill.navlink { display: none; } }
   .pill.current { background: var(--pill-active); color: var(--paper); }
-  @media (max-width: 400px) { .pill { font-size: 15px; padding: 0 14px; } }
+  /* Tablets and phones: every tab stays, in a row that swipes sideways next to the language toggle.
+     The right edge fades out to hint there's more; the end padding lets the last tab scroll clear of the fade. */
+  @media (max-width: 860px) {
+    header .nav-group:first-child { flex: 1 1 auto; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none;
+      padding-right: 28px; scroll-padding-inline: 0 28px;
+      -webkit-mask: linear-gradient(to right, #000 calc(100% - 28px), transparent); mask: linear-gradient(to right, #000 calc(100% - 28px), transparent); }
+    header .nav-group:first-child::-webkit-scrollbar { display: none; }
+    header .nav-group:last-child { flex: none; }   /* the language toggle never shrinks */
+    header .nav-group .pill { flex: none; height: 40px; font-size: 15px; padding: 0 15px; }
+    header .nav-group .pill.lang { padding: 4px; }
+  }
+  @media (max-width: 400px) { header .nav-group .pill { padding: 0 13px; } header .nav-group .pill.lang { padding: 4px; } }
 
   /* Hero */
   .big { margin: 0; padding-top: 20vh; font-weight: 500; text-transform: uppercase; letter-spacing: -0.045em; line-height: .9;
@@ -198,8 +208,8 @@
 
   /* Contact + footer */
   .contact { margin-top: 40px; }
-  .contact-big { font-size: clamp(36px, 7vw, 112px); font-weight: 500; letter-spacing: -0.045em; line-height: .95; display: inline-block;
-    overflow-wrap: anywhere; position: relative; }
+  .contact-big { font-size: min(clamp(36px, 7vw, 112px), calc((100vw - 2 * var(--gutter)) / 14));   /* the email is ~13.1em wide, so /14 keeps it on one line at any width */ font-weight: 500; letter-spacing: -0.045em; line-height: .95; display: inline-block;
+    white-space: nowrap; position: relative; }
   .contact-big::after { content: ""; position: absolute; inset: auto 0 -6px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: 0; transition: transform .35s var(--e); }
   @media (hover: hover) and (pointer: fine) { .contact-big:hover::after { transform: scaleX(1); } }
   footer { margin-top: 18vh; padding-bottom: env(safe-area-inset-bottom, 0px); }
