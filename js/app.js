@@ -213,7 +213,7 @@ function Work() {
         h(CoverArt, { p, n: i + 1 }),
         h("div", { className: "cover-tags" }, p.tags.map(t => h("span", { key: t }, t))))
     );
-    return h("li", { key: p.slug, className: "slot io", style: { "--span": span, "--span-t": Math.min(6, span + 1), "--o": i } },
+    return h("li", { key: p.slug, className: "slot io", "data-shape": tall ? "tall" : "wide", style: { "--span": span, "--span-t": Math.min(6, span + 1), "--o": i } },
       h("a", { className: "tile", href: "#/work/" + p.slug, "aria-label": p.title + T.viewProject }, inner));
   };
   const items = SITE.projects.map((p, i) => ({ p, i }));
