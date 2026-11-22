@@ -140,7 +140,7 @@
     .grid { display: flex; flex-direction: column; gap: 88px; }
     .grid-col { display: contents; }
     .slot { width: 100%; order: var(--o); }
-    .slot .cover { aspect-ratio: 4 / 3; }
+    .slot .cover { aspect-ratio: 3 / 2; }   /* every work block is 3:2 landscape on phones */
     .tile-head { flex-direction: column; align-items: flex-start; gap: 6px; }
     .tile-desc { text-align: left; max-width: none; }
   }
