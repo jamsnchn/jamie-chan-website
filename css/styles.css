@@ -211,7 +211,8 @@
 
   /* Project page */
   .case .big { padding-top: 16px; }
-  .crumbs { padding-top: 18vh; display: flex; justify-content: space-between; gap: 16px; font-size: 14px; font-weight: 500; text-transform: uppercase; color: var(--muted); }
+  /* position + z-index keep the back link above the big title, whose tall letters can reach up over it */
+  .crumbs { position: relative; z-index: 2; padding-top: 18vh; display: flex; justify-content: space-between; gap: 16px; font-size: 14px; font-weight: 500; text-transform: uppercase; color: var(--muted); }
   .crumbs a { color: var(--muted); transition: color .2s var(--e); }
   .crumbs a:hover { color: var(--ink); }
   .case-desc { margin: 0; max-width: 46ch; color: var(--muted); }

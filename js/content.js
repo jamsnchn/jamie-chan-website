@@ -6,8 +6,8 @@ const SITE_EN = {
   subline: "Northeastern University | Marketing & Supply Chain Management",   // small line under the headline, on the left
   photographyIntro: "A collection of photographs from my travels, shoots and everyday life.",
   photographyTagline: "Shot by Jamie Chan",
-  headline: "Hi, I’m Jamie, a brand builder.",   // first sentence of the intro, shown in full-strength ink
-  intro: "I’ve worked at agencies and founded a brand of my own. I enjoy helping brands recognize their worth and express it through media, design, and art direction.",
+  headline: "Hi, I’m Jamie,",   // opening of the intro, shown in full-strength ink; `intro` continues the sentence
+  intro: "a brand builder who enjoys helping brands recognize their worth and express it through media, design, and art direction.",
   expertise: ["Brand strategy", "Art direction", "Performance marketing", "E-commerce", "Influencer marketing", "Product development"],
   about: [
     "I'm studying Business Administration at Northeastern's D'Amore-McKim School of Business, concentrating in Marketing and Supply Chain Management. I grew up between Vancouver and Hong Kong and speak English, Mandarin and Cantonese natively.",
@@ -31,9 +31,9 @@ const SITE_EN = {
       coverRatio: "3 / 2",   // shape of the cover image, width / height
       span: 5,               // block width on the homepage, out of 12 columns
       desc: "Founded a direct-to-consumer leather bag brand: 145+ customers in 17 countries at a $329 average order.",
-      tags: ["Founder", "Shopify", "Klaviyo"],
+      tags: ["Product", "Marketing", "Branding"],
       role: "Founder", org: "LODRO · Hong Kong", years: "2024 – 2026",
-      tools: ["Shopify", "Figma", "Klaviyo", "Particl", "Meta Ads", "Lightroom"],
+      tools: ["Shopify", "Figma", "Klaviyo", "Particl", "Meta Ads", "Illustrator"],
       summary: "I started LODRO to fill a gap I kept noticing: bags were either technical nylon or expensive designer leather, with little in between. I led everything from creative direction and branding to product development, packaging, sampling, supply chain and the website.",
       stats: [
         { value: "145+", label: "Customers" },
@@ -93,9 +93,9 @@ const SITE_EN = {
       pageCoverRatio: "3 / 2",
       coverRatio: "3 / 4",   // shape of the cover image, width / height
       desc: "LODRO bags presented as art in the genre of still life, framed as sculptural objects.",
-      tags: ["Art direction", "Still life", "Product"],
+      tags: ["Art direction", "Branding", "Color grading"],
       role: "Art director", org: "LODRO", years: "March 2026",
-      tools: ["Creative brief", "Set styling", "Lightroom"],
+      tools: ["Lightroom", "Photoshop"],
       summary: "This shoot presents LODRO bags as art in the genre of still life. The bags are placed either by themselves or within carefully composed arrangements alongside other objects. This serves to elevate the bags beyond utility and frame them as sculptural objects.",
       stats: [],
       highlights: [
@@ -132,10 +132,10 @@ const SITE_EN = {
       pageCoverRatio: "3 / 2",
       coverRatio: "3 / 4",   // shape of the cover image, width / height
       desc: "Introducing LODRO's first bag collection through an architectural, lifestyle lens.",
-      tags: ["Art direction", "Lifestyle", "Architecture"],
+      tags: ["Art direction", "Branding", "Color grading"],
       role: "Art director", org: "LODRO", years: "December 2025",
-      tools: ["Creative brief", "Location scouting", "Lightroom"],
-      summary: "“Carried Through Space” introduces the first LODRO bag collection through an architectural, lifestyle lens. It showcases our taste and sets the tone for how LODRO’s bags are meant to exist as part of a certain type of environment.",
+      tools: ["Lightroom", "Photoshop"],
+      summary: "Carried Through Space introduces the first LODRO bag collection through an architectural, lifestyle lens. It showcases our taste and sets the tone for how LODRO’s bags are meant to exist as part of a certain type of environment.",
       stats: [],        // optional, e.g. { value: "40K", label: "Reach" }. Leave empty to hide this section.
       highlights: [
         "Wrote the creative brief that framed the launch of LODRO’s first bag collection around architecture and lifestyle.",
@@ -167,9 +167,9 @@ const SITE_EN = {
       coverRatio: "3 / 2",   // shape of the cover image, width / height
       span: 5,               // block width on the homepage, out of 12 columns
       desc: "Packaging for LODRO's bags: a textured gift box, monogram details and a handwritten-style thank-you card.",
-      tags: ["Packaging", "Branding", "Print"],
+      tags: ["Packaging", "Design", "Print"],
       role: "Founder", org: "LODRO", years: "",
-      tools: ["Adobe Illustrator", "Figma"],
+      tools: ["Illustrator", "Figma"],
       summary: "LODRO's packaging was designed to make the moment of opening feel calm and considered, carrying the brand's quiet, earthy identity from the website into the customer's hands.",
       stats: [],
       highlights: [
@@ -187,7 +187,7 @@ const SITE_EN = {
       desc: "Built LODRO's influencer gifting program: 20+ creators, 60 pieces of UGC and 110,000+ engagements.",
       tags: ["Influencer marketing", "UGC", "Instagram"],
       role: "Founder", org: "LODRO", years: "",
-      tools: ["Creator database", "Instagram", "Gifting"],
+      tools: ["Instagram", "Meta Ads", "Excel", "Notion"],
       summary: "I built and ran LODRO's influencer gifting program, putting our bags in the hands of menswear and lifestyle creators whose style matched the brand. Their posts showed the bags in real, everyday use.",
       stats: [
         { value: "20+", label: "Creators partnered with" },
@@ -219,9 +219,9 @@ const SITE_EN = {
       coverRatio: "3 / 2",   // shape of the cover image, width / height
       span: 5,               // block width on the homepage, out of 12 columns
       desc: "LODRO's first film trip: furniture samples and custom props set against the Tibetan plateau at 3,500m.",
-      tags: ["Art direction", "On location", "Furniture"],
+      tags: ["Art direction", "Branding", "Color grading"],
       role: "Art director & Photographer", org: "LODRO × MATSU · Gannan", years: "December 2024",
-      tools: ["Creative brief", "Location scouting", "Lightroom"],
+      tools: ["Lightroom", "Photoshop"],
       summary: "With product design and development still in progress for LODRO’s yak leather furniture line in partnership with MATSU, our first film trip combined select samples and customized props with the plateau’s surreal scenery to convey a relaxing yet uplifting ambience through abstraction.",
       stats: [
         { value: "3,500m", label: "Altitude" },
@@ -268,7 +268,7 @@ const SITE_EN = {
       desc: "Low, modular furniture inspired by nomadic life, upholstered in yak leather sourced from Tibetan Plateau nomads.",
       tags: ["Product", "Sourcing", "Furniture"],
       role: "Business Development Intern", org: "LODRO x JRS x MATSU", years: "2023 – 2024",
-      tools: ["Market research", "Supplier sourcing", "Sampling"],
+      tools: ["Excel", "Notion"],
       summary: "Designed by Joeri Reynaert, the Nomadic Series is a conceptual furniture collection inspired by the nomads of the Tibetan Plateau. Its low-to-the-ground, modular pieces echo the open horizon and the way nomads move with the seasons, bringing the home closer to nature. At its core is yak leather sourced directly from nomadic communities: hides that are a natural byproduct of their way of life, traceable to the town they came from, and available only in small quantities each year.\n\nMy role was to bring the collection from concept to sample: I coordinated the design, sourced materials, communicated with factories and organized sampling. The collection has now completed its first round of samples.",
       stats: [
         { value: "11", label: "Products in the collection" },
@@ -372,8 +372,8 @@ const SITE_ZH_TEXT = {
   subline: "美國東北大學 | 市場營銷與供應鏈管理",
   photographyIntro: "我的攝影作品集，記錄旅途、拍攝現場與日常生活。",
   photographyTagline: "攝影：陳鍵一",
-  headline: "你好，我是陳鍵一，專注品牌建設。",
-  intro: "我有廣告代理公司的工作經驗，同時創立過自有品牌。我喜歡陪著品牌看見自己的價值，透過內容媒介、視覺設計和藝術統籌完成表達。",
+  headline: "你好，我是陳鍵一，",
+  intro: "專注品牌建設，喜歡陪著品牌看見自己的價值，透過內容媒介、視覺設計和藝術統籌完成表達。",
   expertise: ["品牌策略", "藝術指導", "效果行銷", "電子商務", "網紅行銷", "產品開發"],
   about: [
     "我目前就讀美國東北大學 D’Amore-McKim 商學院，主修工商管理，專攻市場營銷與供應鏈管理。我在溫哥華與香港兩地長大，英語、普通話與粵語皆為母語。",
@@ -383,7 +383,7 @@ const SITE_ZH_TEXT = {
     {
       coverAlt: "白色 LODRO 字母圖示與文字標誌，背景為昏暗的室內空間，有鐵鏽紅下沉式沙發、黑色雕塑感方塊與弧形木長椅",
       desc: "創立直面消費者的皮革包袋品牌：服務 17 個國家逾 145 位顧客，平均訂單金額 329 美元。",
-      tags: ["創辦人", "Shopify", "Klaviyo"],
+      tags: ["產品", "行銷", "品牌"],
       role: "創辦人", org: "LODRO · 香港",
       summary: "我創立 LODRO，是為了填補一直留意到的市場空白：包袋不是機能尼龍款，就是昂貴的設計師皮革款，中間幾乎沒有選擇。從創意方向、品牌塑造，到產品開發、包裝、打樣、供應鏈與網站，全部由我主導。",
       stats: [{ label: "顧客" }, { label: "國家" }, { label: "平均訂單金額" }, { label: "核心款式售罄率" },
@@ -423,9 +423,9 @@ const SITE_ZH_TEXT = {
       coverAlt: "一款黑色皮革 LODRO 斜背包擱在一疊白色餐盤與一片麵包之上",
       pageCoverAlt: "一款黑色皮革 LODRO 斜背包放在一排雞蛋上，旁邊是玻璃調味瓶",
       desc: "以靜物畫的手法呈現 LODRO 包袋，將其視為雕塑般的物件。",
-      tags: ["藝術指導", "靜物", "產品"],
+      tags: ["藝術指導", "品牌", "調色"],
       role: "藝術指導", years: "2026 年 3 月",
-      tools: ["創意簡報", "場景佈置", "Lightroom"],
+      tools: ["Lightroom", "Photoshop"],
       summary: "這次拍攝以靜物畫的藝術形式呈現 LODRO 包袋。包袋或單獨擺放，或與其他物件一同精心構圖，藉此讓包袋超越實用功能，成為雕塑般的物件。",
       highlights: [
         "撰寫創意簡報，以靜物畫的藝術形式呈現 LODRO 包袋。",
@@ -448,10 +448,10 @@ const SITE_ZH_TEXT = {
       coverAlt: "身穿深色羊毛大衣、戴墨鏡的模特兒站在回收木長凳上，背後是雕塑感砂岩牆飾，手持黑色 LODRO 公事包與灰褐色皮革 LODRO 包袋",
       pageCoverAlt: "一名身穿米白色針織毛衣、戴著墨鏡的男子坐在木椅上，手持黑色 LODRO 包袋，身後是木製音響與層架",
       desc: "以建築與生活風格的視角，呈現 LODRO 首個包袋系列。",
-      tags: ["藝術指導", "生活風格", "建築"],
+      tags: ["藝術指導", "品牌", "調色"],
       role: "藝術指導", years: "2025 年 12 月",
-      tools: ["創意簡報", "場地勘景", "Lightroom"],
-      summary: "「穿越空間」以建築與生活風格的視角，呈現 LODRO 首個包袋系列。它展現了我們的品味，也為 LODRO 包袋應當融入的環境定下基調。",
+      tools: ["Lightroom", "Photoshop"],
+      summary: "穿越空間以建築與生活風格的視角，呈現 LODRO 首個包袋系列。它展現了我們的品味，也為 LODRO 包袋應當融入的環境定下基調。",
       highlights: [
         "撰寫創意簡報，以建築與生活風格為主軸，構思 LODRO 首個包袋系列的發布。",
         "勘察與 LODRO 包袋理想環境相符的建築室內空間。",
@@ -471,7 +471,7 @@ const SITE_ZH_TEXT = {
       title: "LODRO 包裝",
       coverAlt: "LODRO 包裝：雙手捧著印有 LODRO 字母標誌的暖灰色紋理禮盒、印有風景圖與壓凸標誌的感謝卡，以及在木桌上打開、內有薄紙包裹包袋的禮盒",
       desc: "LODRO 包袋的包裝設計：紋理禮盒、字母標誌細節與感謝卡。",
-      tags: ["包裝", "品牌", "印刷"],
+      tags: ["包裝", "設計", "印刷"],
       role: "創辦人",
       summary: "LODRO 的包裝旨在讓開箱的一刻顯得平靜而用心，把品牌沉穩、自然的形象從網站延伸到顧客手中。",
       highlights: [
@@ -486,7 +486,7 @@ const SITE_ZH_TEXT = {
       desc: "建立 LODRO 的網紅贈品合作計畫：逾 20 位創作者、60 則 UGC、累計互動逾 110,000 次。",
       tags: ["網紅行銷", "UGC", "Instagram"],
       role: "創辦人",
-      tools: ["創作者資料庫", "Instagram", "產品贈送"],
+      tools: ["Instagram", "Meta Ads", "Excel", "Notion"],
       summary: "我建立並營運 LODRO 的網紅贈品合作計畫，把包袋交到風格與品牌相符的男裝及生活風格創作者手中。他們的貼文展現了包袋在真實日常中的使用情境。",
       stats: [{ label: "合作創作者" }, { label: "UGC 內容" }, { label: "互動次數" }],
       highlights: [
@@ -506,9 +506,9 @@ const SITE_ZH_TEXT = {
       title: "抵達世界屋脊",
       coverAlt: "一人坐在擺有白色靠墊的沙發上看報紙，沙發佈置於藍天下青藏高原的開闊草原上",
       desc: "LODRO 首次外拍：在海拔 3,500 米的青藏高原上，以家具樣品與訂製道具創作影像。",
-      tags: ["藝術指導", "外景拍攝", "家具"],
+      tags: ["藝術指導", "品牌", "調色"],
       role: "藝術指導與攝影師", org: "LODRO × MATSU · 甘南", years: "2024 年 12 月",
-      tools: ["創意簡報", "場地勘景", "Lightroom"],
+      tools: ["Lightroom", "Photoshop"],
       summary: "LODRO 與 MATSU 合作的犛牛皮家具系列仍在設計與開發階段，我們的首次外拍便將精選樣品與訂製道具，融入高原超現實的景色之中，以抽象的手法傳遞一種放鬆而振奮的氛圍。",
       stats: [{ value: "3,500 米", label: "海拔" }, { label: "拍攝現場氣溫" }],
       highlights: [
@@ -535,7 +535,7 @@ const SITE_ZH_TEXT = {
       desc: "以遊牧生活為靈感的低矮模組化家具，採用源自青藏高原遊牧民族的犛牛皮。",
       tags: ["產品", "採購", "家具"],
       role: "業務發展實習生", org: "LODRO x JRS x MATSU",
-      tools: ["市場研究", "供應商開發", "打樣"],
+      tools: ["Excel", "Notion"],
       summary: "遊牧系列由 Joeri Reynaert 設計，是一個以青藏高原遊牧民族為靈感的概念家具系列。低矮貼地的模組化設計，呼應高原開闊的地平線，以及遊牧民族隨季節遷徙的生活方式，讓居家空間更貼近自然。系列的核心是直接向遊牧社群採購的犛牛皮：這些皮革是遊牧生活的自然副產品，可追溯至來源城鎮，每年僅有少量供應。\n\n我的角色是將系列從概念推進到打樣：負責統籌設計、採購材料、與工廠溝通並安排打樣，目前此系列已完成第一輪打樣。",
       stats: [{ label: "系列產品數" }, { label: "向 CEO 與 CMO 簡報的案例研究" }, { label: "至今仍在合作的供應商" }],
       highlights: [
