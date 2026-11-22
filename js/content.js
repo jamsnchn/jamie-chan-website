@@ -346,7 +346,6 @@ const PHOTOS = [
   { src: "photos/gannan-plateau-ridges.jpg", ratio: "3 / 2", caption: "Plateau", place: "Gannan", year: "2024", zh: { caption: "高原", place: "甘南" } },
   { src: "photos/beijing-seventeen-arch-bridge.jpg", ratio: "3 / 4", caption: "Seventeen-Arch Bridge", place: "Beijing", year: "2025", zh: { caption: "十七孔橋", place: "北京" } },
   { src: "photos/beijing-summer-palace-boats.jpg", ratio: "3 / 4", caption: "Boats in the snow", place: "Beijing", year: "2025", zh: { caption: "雪中遊船", place: "北京" } },
-  { src: "photos/hong-kong-facade-grid.jpg", ratio: "3 / 4", caption: "Grid", place: "Hong Kong", year: "2025", zh: { caption: "格子", place: "香港" } },
   { src: "photos/qingyuan-ferris-wheel.jpg", ratio: "3 / 4", caption: "Ferris wheel", place: "Qingyuan", year: "2025", zh: { caption: "摩天輪", place: "清遠" } },
   { src: "photos/prague-old-town-square.jpg", ratio: "3 / 4", caption: "Old Town Square", place: "Prague", year: "2025", zh: { caption: "老城廣場", place: "布拉格" } },
   { src: "photos/prague-st-vitus-cathedral.jpg", ratio: "4 / 3", caption: "St. Vitus Cathedral", place: "Prague", year: "2025", zh: { caption: "聖維特主教座堂", place: "布拉格" } },
@@ -374,7 +373,7 @@ const SITE_ZH_TEXT = {
   photographyTagline: "攝影：陳鍵一",
   headline: "你好，我是陳鍵一，",
   intro: "專注品牌建設，喜歡陪著品牌看見自己的價值，透過內容媒介、視覺設計和藝術統籌完成表達。",
-  expertise: ["品牌策略", "藝術指導", "效果行銷", "電子商務", "網紅行銷", "產品開發"],
+  expertise: ["品牌策略", "藝術指導", "廣告投放", "電子商務", "網紅行銷", "產品開發"],
   about: [
     "我目前就讀美國東北大學 D’Amore-McKim 商學院，主修工商管理，專攻市場營銷與供應鏈管理。我在溫哥華與香港兩地長大，英語、普通話與粵語皆為母語。",
     "我的工作處於創意與商業的交匯點：塑造品牌的識別與藝術方向，再透過付費媒體、電子郵件與內容創作者推動銷售。工作之餘，我喜歡踢足球、攝影、聽爵士樂、下廚，或欣賞家具設計。"
